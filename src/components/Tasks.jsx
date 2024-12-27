@@ -1,4 +1,3 @@
-import CustomInput from "./CustomInput";
 import NewTask from "./NewTask";
 export default function Tasks({ projectId, tasks, onAdd, onDelete }) {
   return (
@@ -12,7 +11,7 @@ export default function Tasks({ projectId, tasks, onAdd, onDelete }) {
       )}
       {tasks.length > 0 && (
         <ul className="p4 mt-8 rounded-md bg-stone-100">
-          {tasks.map((task) => (
+          {tasks.filter(task => task.projectId === projectId).map((task) => (
             <li key={task.id} className="flex justify-between my-4 ">
               <span>{task.text}</span>
               <button

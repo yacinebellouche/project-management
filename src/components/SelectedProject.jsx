@@ -33,7 +33,7 @@ export default function SelectedProject({
           </p>
         </div>
       </header>
-      <Tasks projectId={project.projectId} tasks={tasks} onAdd={onAddTask} onDelete={onDeleteTask} />
+      <Tasks projectId={project.id} tasks={tasks} onAdd={onAddTask} onDelete={onDeleteTask} />
     </div>
   );
 }
